@@ -1,0 +1,76 @@
+{
+    "sessions": [{
+        "_id": "54f1368ed1bcf203004dafa4",
+        "title": "One app to rule them all: building apps for multi-device world",
+        "description": "Computing space is much more complicated today than it was 10 years ago, and it is now only natural to expect having same functionality and experience with apps and services whether you access them on your phone, tablet, desktop or (soon) even wearables. Responsiveness is a keyword that’s thrown around a lot, and while there are many ways existing technologies can help you achieve this, there is no one simple method that can be used to magically adapt an interface to different devices, and in the end nothing goes above good (interaction) design. This session will explore approaching responsiveness from the design perspective.",
+        "date": "2015-04-07T04:00:00.000Z",
+        "start_time": "2015-04-07T16:30:00.000Z",
+        "end_time": "2015-04-07T17:20:00.000Z",
+        "hashtag": "#oneapptorulethemall",
+        "__v": 1,
+        "location": {
+            "_id": "54f136bed1bcf203004dafa8",
+            "name": "Room 1",
+            "__v": 0
+        },
+        "track": {
+            "_id": "54f13696d1bcf203004dafa5",
+            "name": "Design",
+            "order_index": 1,
+            "__v": 0
+        },
+        "speakers": [{
+            "_id": "54f13706d1bcf203004dafa9",
+            "avatar_url": "http://cdn2.hubspot.net/hub/439787/file-2520276472-jpg/img/headshots/MiroBojic.jpg?t=1424529046577&t=1424796153192",
+            "name": "Miroslav Bojic",
+            "bio": "Miro has a dual background in Interaction Design and Computer Science. For the past three years at Sencha, he has worked primarily on designing developer tools, such as Sencha Architect, Animator as well as future Sencha tools, and he has a lot of experience with Ext JS Themes. Prior to Sencha, Miro worked as an interaction designer at Philips in the Netherlands. Miro has a doctorate degree in User System Interaction and is fluent in 3 languages (and conversational in an additional 3). When not designing, Miro enjoys riding his dutch bicycle (opafiets) in San Francisco.​",
+            "twitter_handle": "",
+            "__v": 0,
+            "sessions": []
+        }]
+    }, {
+        "_id": "54f13bc1f38c9b0300f66563",
+        "title": "Materializing Ext JS",
+        "description": "Sencha Ext JS has always been a pioneer in widget libraries creating visual attractive interfaces out of the box allowing the creation of highly interactive single page applications. Not only did Sencha enhance the framework’s look throughout the years, but it also introduced powerful features to allow developers to customize the look and feel in an efficient way. One big step forward was the migration to Sass with Compass for styling which improved the code organization of CSS code immensely. Later the introduction of packages added support for easily adding custom themes that enhance an application’s style and components.\n\nIn 2014, Google announced Material design, a comprehensive guide for visual, motion, and interaction design across platforms and devices. Ever since, it has received praise by developers and designers. In this session, we’ll explore how to build a Material design interface on top of the most powerful enterprise JavaScript framework of today by leveraging its powerful customization features. We'll look into what makes a Material design interface, how to create a custom theme package, how to create custom components, how to create custom animations, how to make the same application mouse and touch friendly and how to make the interface responsive to desktop and tablet screens.",
+        "date": "2015-04-07T04:00:00.000Z",
+        "start_time": "2015-04-07T20:40:00.000Z",
+        "end_time": "2015-04-07T21:30:00.000Z",
+        "hashtag": "#materializingextjs",
+        "track": {
+            "_id": "54f13696d1bcf203004dafa5",
+            "name": "Design",
+            "order_index": 1,
+            "__v": 0
+        },
+        "location": {
+            "_id": "54f136bed1bcf203004dafa8",
+            "name": "Room 1",
+            "__v": 0
+        },
+        "__v": 0,
+        "speakers": []
+    }],
+    "speakers": [{
+        "_id": "54f13706d1bcf203004dafa9",
+        "avatar_url": "http://cdn2.hubspot.net/hub/439787/file-2520276472-jpg/img/headshots/MiroBojic.jpg?t=1424529046577&t=1424796153192",
+        "name": "Miroslav Bojic",
+        "bio": "Miro has a dual background in Interaction Design and Computer Science. For the past three years at Sencha, he has worked primarily on designing developer tools, such as Sencha Architect, Animator as well as future Sencha tools, and he has a lot of experience with Ext JS Themes. Prior to Sencha, Miro worked as an interaction designer at Philips in the Netherlands. Miro has a doctorate degree in User System Interaction and is fluent in 3 languages (and conversational in an additional 3). When not designing, Miro enjoys riding his dutch bicycle (opafiets) in San Francisco.​",
+        "twitter_handle": "",
+        "__v": 0,
+        "sessions": []
+    }, {
+        "_id": "54f13b4cf38c9b0300f66562",
+        "avatar_url": "http://cdn2.hubspot.net/hub/439787/file-2511562211-jpg/img/headshots/SteffenHiller.jpg?t=1424529046577&t=1424796153192",
+        "name": "Steffen Hiller",
+        "bio": "Steffen Hiller has been a loyal web developer since 1999. He likes to move pixels just as much as he likes to write code. While fighting here and there with plain PHP, HTML, JavaScript and CSS, his development experience took a major leap forward in 2007 when he started to work with two of today’s still leading web frameworks: Ruby on Rails and Ext JS. Since then he's enjoying Ruby and JavaScript on a daily basis. He has been working on numerous projects involving Ext JS and Sencha Touch. Steffen is working preferably close to the beach such as in Spain and Aruba, where he also tries to kitesurf as much as possible.",
+        "twitter_handle": "steffenhiller",
+        "__v": 0,
+        "sessions": []
+    }],
+    "locations": [{
+        "_id": "54f136bed1bcf203004dafa8",
+        "name": "Room 1",
+        "__v": 0
+    }],
+    "checksum": "d5231f03a54f9aef634e1eb7df385860"
+}

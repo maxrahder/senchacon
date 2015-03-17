@@ -1,0 +1,269 @@
+@font-face {
+    font-family: 'Klavika';
+    src: 	url('fonts/klavika/klavika-regular-webfont.eot');
+    src: 	url('fonts/klavika/klavika-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/klavika/klavika-regular-webfont.woff') format('woff'),
+        url('fonts/klavika/klavika-regular-webfont.ttf') format('truetype'),
+        url('fonts/klavika/klavika-regular-webfont.svg#Klavika') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KlavikaLight';
+    src: 	url('fonts/klavika/klavika-light-webfont.eot');
+    src: 	url('fonts/klavika/klavika-light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/klavika/klavika-light-webfont.woff') format('woff'),
+        url('fonts/klavika/klavika-light-webfont.ttf') format('truetype'),
+        url('fonts/klavika/klavika-light-webfont.svg#KlavikaLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'senchacon';
+    src:	url('fonts/senchacon/senchacon.eot?-4ztj2j');
+    src:	url('fonts/senchacon/senchacon.eot?#iefix-4ztj2j') format('embedded-opentype'),
+        url('fonts/senchacon/senchacon.woff?-4ztj2j') format('woff'),
+        url('fonts/senchacon/senchacon.ttf?-4ztj2j') format('truetype'),
+        url('fonts/senchacon/senchacon.svg?-4ztj2j#senchacon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$base-color: #00526C;
+$grey : #f8f8f8;
+$green: #8ac440;
+$lightblue: #56b1cd;
+$font-size: 14px;
+
+$designBackground: $green;
+$developBackground: $lightblue;
+$deployBackground: $base-color;
+
+$designColor: darken($designBackground, 10%);
+$developColor: $developBackground;
+$deployColor: darken($deployBackground, 10%);
+
+$favoriteColor: red;
+@import "compass/css3/transition";
+@import "compass/css3/opacity";
+@import "compass/css3/images";
+
+@mixin blocks($bg) {
+    background: $bg;
+    border: 1px solid $lightblue;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+    display: block;
+    height: 34px;
+    padding: 4px;
+    margin: 2px;
+}
+
+.x-webkit *:focus{
+    outline: none !important;
+}
+
+.x-btn{
+    &.design{
+        .x-btn-inner{
+            color: $designColor !important;
+        }
+        .x-btn-glyph {
+            color: $designColor !important;
+        }
+    }
+    &.develop{
+        .x-btn-inner{
+            color: $developColor !important;
+        }
+        .x-btn-glyph {
+            color: $developColor !important;
+        }
+    }
+    &.deploy{
+        .x-btn-inner{
+            color: $deployColor !important;
+        }
+        .x-btn-glyph {
+            color: $deployColor !important;
+        }
+    }
+}
+
+.heart {
+    color: red !important;
+}
+
+.daybar {
+    @include blocks($grey);
+    position: relative;
+    overflow: hidden;
+
+    > span {
+
+        @include blocks($green);
+
+        &.design { background: $designBackground; }
+        &.develop { background: $developBackground; }
+        &.deploy { background: $deployBackground; }
+
+        border-radius: 6px;
+        border: none;
+
+        color: #fff;
+        font-size: 0.8em;
+        font-weight: bold;
+        text-align: center;
+        height: 86%;
+        line-height: 25px;
+        overflow: hidden;
+        position: absolute;
+        padding: 2px;
+        top: 0;
+    }
+
+}
+div.presentation {
+
+    margin: 24px 0px 0px 0;
+
+    div.title {
+        position: relative;
+        font-weight: bold;
+        line-height: 50px;
+        font-family: Klavika;
+        font-size: 18px;
+        vertical-align: top;
+        color: $lightblue;
+        white-space: nowrap;
+
+        &:before {
+            color: darken($grey, 20%);
+            content: "\6f";
+            font-family: 'senchacon';
+            font-size: 25px;
+        }
+
+    }
+    &.collapsed div.title:before {
+        content: "\4f";
+    }
+
+    div.description {
+        @include transition-property(opacity, padding);
+        @include transition-duration(1s, 0.3s);
+        height: auto;
+        opacity: 1;
+        overflow: hidden;
+        padding: 0;
+        margin: 0 0 2em 1em;
+
+        div.timeAndLocation {
+            color: #999999;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        div.speakers {
+            figure {
+                margin: 6px !important;
+            }
+            figcaption {
+                text-align: center;
+                font-size: 0.7em;
+                margin-top: -8px;
+            }
+        }
+
+    }
+    &.collapsed div.description {
+        @include transition-property(opacity, padding);
+        @include transition-duration(1s, 0.3s);
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        margin: 0 0 0 1em;
+    }
+
+    .favoriteicon {
+
+        display: inline-block;
+        height: 35px;
+        width: 35px;
+        font-family: 'senchacon';
+        color: $favoriteColor;
+        font-size: 24px;
+
+        &.heartin {
+            &:before {
+                content: "H";
+            }
+        }
+        &.heartout {
+            &:before {
+                content: "h";
+            }
+        }
+    }
+
+    .trackicon {
+        font-family: 'senchacon';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        border-radius: 50px;
+        display: inline-block;
+        height: 35px;
+        width: 35px;
+
+        //position: absolute;
+        //right: -5px;
+        //top: -35px;
+
+        &:before {
+            color: #fff;
+            font-size: 24px;
+            line-height: 35px;
+            text-align: center;
+            display: block;
+        }
+
+        &.design {
+            background: $designBackground;
+            font-size: 20px;
+            padding: 0 0 0 3px;
+            &:before {
+                content: "\65";
+            }
+        }
+
+        &.develop {
+            background: $developBackground;
+            &:before {
+                content: "\63";
+            }
+        }
+
+        &.deploy {
+            background: $deployBackground;
+            &:before {
+                content: "\43";
+            }
+        }
+    }
+
+    .trackicon {
+    }
+
+}

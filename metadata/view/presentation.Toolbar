@@ -1,0 +1,387 @@
+{
+    "type": "Ext.toolbar.Toolbar",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|padding": 2,
+        "date": null,
+        "dayOfWeek": null,
+        "defaults": [
+            "{margin: 6,padding:2}"
+        ],
+        "designer|userAlias": "presentationtoolbar",
+        "designer|userClassName": "presentation.Toolbar",
+        "favorites": null,
+        "publishes": null,
+        "responsiveConfig": [
+            "   {",
+            "    tall: {",
+            "        tall: true",
+            "    },wide: {",
+            "        tall: false",
+            "    }",
+            "}"
+        ],
+        "searchTerm": null,
+        "track": null,
+        "viewModel": [
+            "`null`"
+        ]
+    },
+    "name": "MyToolbar1",
+    "configAlternates": {
+        "favorites": "boolean",
+        "dayOfWeek": "number"
+    },
+    "designerId": "d0189fd8-8215-4455-9697-200b0cd67c30",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "setVertical",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "date",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "track",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "favorites",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "searchTerm",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "dayOfWeek",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "fun",
+            "type": "string"
+        }
+    ],
+    "viewControllerInstanceId": "c142bdef-1d9c-4b79-a9ba-18caf3532cbd",
+    "viewModelInstanceId": "a84332b1-27c7-4818-b504-df5f6a3e2d06",
+    "cn": [
+        {
+            "type": "Ext.button.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": "favorites",
+                "enableToggle": true,
+                "glyph": "104@senchacon",
+                "iconCls": "heart",
+                "itemId": "favorites",
+                "layout|flex": null,
+                "pressed": null,
+                "reference": "favorites",
+                "style": null,
+                "text": null
+            },
+            "name": "MyButton6",
+            "designerId": "43269fde-d8ff-43e7-bf67-2096d38df3d6",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "button",
+                            "state"
+                        ],
+                        "fn": "toggleHandler",
+                        "implHandler": [
+                            "button.setGlyph(state?'72@senchacon':'104@senchacon');"
+                        ]
+                    },
+                    "name": "toggleHandler",
+                    "designerId": "af6aceaf-c5d6-4ad1-ac65-fa057b62503d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Segmented",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "date": null,
+                "itemId": "dayOfWeek",
+                "layout|flex": null,
+                "padding": null,
+                "reference": "dayOfWeek"
+            },
+            "name": "MySegmentedButton",
+            "configAlternates": {
+                "date": "object"
+            },
+            "designerId": "efd063a7-ce3f-4efa-b3f7-159b152a74bb",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "date",
+                    "type": "string"
+                },
+                {
+                    "group": "(Custom Properties)",
+                    "name": "day",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "enableToggle": true,
+                        "glyph": "83@senchacon",
+                        "itemId": "tuesday",
+                        "pressed": null,
+                        "responsiveConfig": null,
+                        "text": "Tuesday",
+                        "value": 2
+                    },
+                    "name": "MyButton",
+                    "configAlternates": {
+                        "pressed": "binding"
+                    },
+                    "designerId": "6f3a76b7-60d5-42da-8f80-df280697cac9"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "glyph": "83@senchacon",
+                        "itemId": "wednesday",
+                        "text": "Wednesday",
+                        "value": 3
+                    },
+                    "name": "MyButton1",
+                    "designerId": "b495ca1c-c8e3-4a37-adb8-a2e338ea7158"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "glyph": "83@senchacon",
+                        "itemId": "thursday",
+                        "text": "Thursday",
+                        "value": 4
+                    },
+                    "name": "MyButton2",
+                    "designerId": "da8bf888-f57f-4eef-bdd2-fc3acbb0dafa"
+                }
+            ]
+        },
+        {
+            "type": "Ext.button.Segmented",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowMultiple": true,
+                "itemId": "track",
+                "layout|flex": null,
+                "reference": null
+            },
+            "name": "MySegmentedButton1",
+            "designerId": "f2dd4a2f-9af4-4179-b473-316fe9ce593b",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": "design",
+                        "enableToggle": true,
+                        "glyph": "101@senchacon",
+                        "iconCls": null,
+                        "itemId": "design",
+                        "pressed": true,
+                        "reference": "design",
+                        "text": "Design"
+                    },
+                    "name": "MyButton3",
+                    "designerId": "b7989f08-aadd-45cb-b492-2f721739a1aa"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": "develop",
+                        "enableToggle": true,
+                        "glyph": "99@senchacon",
+                        "iconCls": null,
+                        "itemId": "develop",
+                        "pressed": true,
+                        "reference": "develop",
+                        "text": "Develop"
+                    },
+                    "name": "MyButton4",
+                    "designerId": "dad29ed2-68d5-4170-be34-4d2bee42540d"
+                },
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": "deploy",
+                        "enableToggle": true,
+                        "glyph": "67@senchacon",
+                        "iconCls": null,
+                        "itemId": "deploy",
+                        "pressed": true,
+                        "reference": "deploy",
+                        "text": "Deploy"
+                    },
+                    "name": "MyButton5",
+                    "designerId": "56f40ecf-44bc-415a-bcbe-65baa160ac4a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Search",
+                "itemId": "search",
+                "labelWidth": 50,
+                "layout|flex": null,
+                "name": null,
+                "reference": "searchTerm",
+                "value": null
+            },
+            "name": "MyTextField",
+            "configAlternates": {
+                "value": "binding"
+            },
+            "designerId": "896d2544-040f-45b4-b541-61c7fdb248ad"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "tall"
+                ],
+                "fn": "updateTall",
+                "implHandler": [
+                    "this.refreshTall();"
+                ]
+            },
+            "name": "updateTall",
+            "designerId": "13fccf30-8865-4e9f-a302-9de8b7030791"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "refreshTall",
+                "implHandler": [
+                    "var tall = !!this.getTall();",
+                    "this.down('#search').setVisible(!tall);",
+                    "if (tall){",
+                    "",
+                    "    this.down('#tuesday').setText('7th');",
+                    "    this.down('#wednesday').setText('8th');",
+                    "    this.down('#thursday').setText('9th');",
+                    "",
+                    "    this.down('#design').setText('');",
+                    "    this.down('#develop').setText('');",
+                    "    this.down('#deploy').setText('');",
+                    "",
+                    "} else {",
+                    "",
+                    "    this.down('#tuesday').setText('Tuesday');",
+                    "    this.down('#wednesday').setText('Wednesday');",
+                    "    this.down('#thursday').setText('Thursday');",
+                    "",
+                    "    this.down('#design').setText('Design');",
+                    "    this.down('#develop').setText('Develop');",
+                    "    this.down('#deploy').setText('Deploy');",
+                    "",
+                    "}"
+                ]
+            },
+            "name": "refreshTall",
+            "designerId": "99056329-6a5e-4afd-a9be-ed014b7dbb9e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initComponent",
+                "implHandler": [
+                    "this.callParent();",
+                    "this.refreshTall();"
+                ]
+            },
+            "name": "initComponent",
+            "designerId": "3148361e-6a5c-459c-922f-732cb2c9a133"
+        }
+    ]
+}

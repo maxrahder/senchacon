@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "presentationtoolbar",
+        "designer|userClassName": "presentation.ToolbarViewModel"
+    },
+    "designerId": "a84332b1-27c7-4818-b504-df5f6a3e2d06"
+}

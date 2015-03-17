@@ -1,0 +1,37 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "myviewport",
+        "designer|userClassName": "MyViewportViewController"
+    },
+    "designerId": "25694a62-79b3-46ba-b91a-9a0f4d55288d",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "viewModel"
+                ],
+                "fn": "initViewModel",
+                "implHandler": [
+                    "",
+                    "console.log('yo');",
+                    "this.getViewModel().bind('{dayOfWeek}', function(dayOfWeek){console.log(dayOfWeek);});",
+                    "this.getViewModel().bind('{filters.dayOfWeek}', function(dayOfWeek){console.log(dayOfWeek);});"
+                ]
+            },
+            "name": "initViewModel",
+            "designerId": "ea26a089-42c1-448e-95eb-017d1dfaf36d"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "presentationpresentationviewpanel",
+        "designer|userClassName": "presentation.PresentationViewPanelViewController"
+    },
+    "designerId": "0444dbea-b74c-476c-8c46-bbf61d7ef5b1"
+}

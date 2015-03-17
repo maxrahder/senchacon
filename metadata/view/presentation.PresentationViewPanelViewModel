@@ -1,0 +1,321 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "presentationpresentationviewpanel",
+        "designer|userClassName": "presentation.PresentationViewPanelViewModel"
+    },
+    "designerId": "0c7f5590-0cc4-4d38-8e0a-3990195f9447",
+    "cn": [
+        {
+            "type": "Ext.data.Store",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoLoad": true,
+                "model": "Presentation",
+                "name": "presentations"
+            },
+            "name": "MyStore",
+            "designerId": "f6946306-30a0-4589-8712-6be0ac223eb0",
+            "cn": [
+                {
+                    "type": "Ext.util.Filter",
+                    "reference": {
+                        "name": "filters",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "data": null,
+                        "dayOfWeek": null,
+                        "filterCriteria": null,
+                        "id": "track",
+                        "junk": null,
+                        "presentationData": null,
+                        "track": [
+                            "{",
+                            "    design: '{design.pressed}',",
+                            "    develop: '{develop.pressed}',",
+                            "    deploy: '{deploy.pressed}'",
+                            "}"
+                        ]
+                    },
+                    "name": "MyFilter",
+                    "configAlternates": {
+                        "data": "object",
+                        "junk": "object",
+                        "presentationData": "object",
+                        "filterCriteria": "object",
+                        "track": "object"
+                    },
+                    "designerId": "fd143afa-f1ae-4c48-8bd7-5152c5e95484",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "dayOfWeek",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "data",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "junk",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "presentationData",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "filterCriteria",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "track",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "item"
+                                ],
+                                "fn": "filterFn",
+                                "implHandler": [
+                                    "var track = item.data.track;",
+                                    "var isTrack =",
+                                    "    (this.track.design\t\t&& (track===\"Design\")) \t||",
+                                    "    (this.track.develop \t&& (track===\"Develop\")) ||",
+                                    "    (this.track.deploy \t\t&& (track===\"Deploy\"));",
+                                    "return isTrack;",
+                                    ""
+                                ]
+                            },
+                            "name": "filterFn",
+                            "designerId": "5316b51f-b95e-491e-a9c7-3903ba81dcaf"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.util.Filter",
+                    "reference": {
+                        "name": "filters",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dayOfWeek": [
+                            "{dayOfWeek.value}"
+                        ],
+                        "id": "dayOfWeek"
+                    },
+                    "name": "MyFilter2",
+                    "configAlternates": {
+                        "dayOfWeek": "binding"
+                    },
+                    "designerId": "6ccf55af-29f1-4c2d-9e43-67441bee5a87",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "dayOfWeek",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "item"
+                                ],
+                                "fn": "filterFn",
+                                "implHandler": [
+                                    "                        return (item.data.startTime.getDay() === this.dayOfWeek);",
+                                    ""
+                                ]
+                            },
+                            "name": "filterFn",
+                            "designerId": "cf0a58b4-077e-43f1-86bf-53e12e1213bc"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.util.Filter",
+                    "reference": {
+                        "name": "filters",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "favorites": "{favorites.pressed}",
+                        "id": "favorites"
+                    },
+                    "name": "MyFilter3",
+                    "designerId": "ff2dee43-64e5-4a2e-b00f-c7f9c579d440",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "favorites",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "item"
+                                ],
+                                "fn": "filterFn",
+                                "implHandler": [
+                                    "return (!this.favorites || Test.stateProvider.get(item.data.id)) ;"
+                                ]
+                            },
+                            "name": "filterFn",
+                            "designerId": "deb6ed70-8679-40ca-9d73-aff2bcba96f7"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.util.Filter",
+                    "reference": {
+                        "name": "filters",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "search",
+                        "searchTerm": "`null`"
+                    },
+                    "name": "MyFilter1",
+                    "designerId": "eedfd38d-8b9a-46a1-9ff8-a45e9b22f562",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "searchTerm",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "item"
+                                ],
+                                "fn": "filterFn",
+                                "implHandler": [
+                                    "return true;"
+                                ]
+                            },
+                            "name": "filterFn",
+                            "designerId": "affc6351-188c-41ab-9973-1068b09b859b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.util.Sorter",
+                    "reference": {
+                        "name": "sorters",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "property": "startTime"
+                    },
+                    "name": "MySorter",
+                    "designerId": "eed25532-3acd-4678-adeb-91a2163fbfd9"
+                },
+                {
+                    "type": "Ext.util.Sorter",
+                    "reference": {
+                        "name": "sorters",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "property": "track"
+                    },
+                    "name": "MySorter1",
+                    "designerId": "bfdf310d-a90e-4392-b726-00ddf0de1d45"
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onStoreLoad",
+                        "implHandler": [
+                            "Ext.Array.forEach(records, function(presentation){",
+                            "    presentation.set('favorite', !!Test.stateProvider.get(presentation.id));",
+                            "});"
+                        ],
+                        "name": "load",
+                        "scope": "me"
+                    },
+                    "name": "onStoreLoad",
+                    "designerId": "85ad6903-287c-40dc-8b17-1ef6b44dbeb9"
+                },
+                {
+                    "type": "viewcontrollereventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onStoreUpdate",
+                        "implHandler": [
+                            "console.log('onStoreUpdate');",
+                            "console.log(record.data.favorite);",
+                            "Test.stateProvider.set(record.id, record.data.favorite);"
+                        ],
+                        "name": "update",
+                        "scope": "me"
+                    },
+                    "name": "onStoreUpdate",
+                    "designerId": "ebb891de-7297-4f4b-a0b5-14e625ffef75"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,281 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Presentation"
+    },
+    "name": "MyModel",
+    "designerId": "23509ee9-aa46-48af-ad6d-2f24cceda0cc",
+    "cn": [
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "date"
+            },
+            "name": "MyField",
+            "designerId": "5793f28f-81f3-48d4-9529-563b2b724a64",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "start_time",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "start_time"
+            },
+            "name": "MyField5",
+            "designerId": "585c713c-d4ea-4062-bf4b-88aa3e7b356a"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "end_time"
+            },
+            "name": "MyField6",
+            "designerId": "dc81a9b1-4331-4e09-be0c-4aa05878339d"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": null,
+                "name": "startTime"
+            },
+            "name": "MyField8",
+            "designerId": "4b1921b8-126f-4f9d-af92-1200c6d99576",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "data"
+                        ],
+                        "fn": "calculate",
+                        "implHandler": [
+                            "return Ext.Date.parse((data.date + ' ' + data.start_time), 'Y-m-d g:i A');"
+                        ]
+                    },
+                    "name": "calculate",
+                    "designerId": "7493daba-b4f8-41cb-b6e1-6f4825ff43fd"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": null,
+                "name": "endTime"
+            },
+            "name": "MyField9",
+            "designerId": "c3a75511-2a4e-4890-82d2-42ceeaf69c77",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "data"
+                        ],
+                        "fn": "calculate",
+                        "implHandler": [
+                            "return Ext.Date.parse((data.date + ' ' + data.end_time), 'Y-m-d g:i A');"
+                        ]
+                    },
+                    "name": "calculate",
+                    "designerId": "f6d154f5-a6ab-41ff-9ed3-352cb268d7e3"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": [
+                    "track.name"
+                ],
+                "name": "track"
+            },
+            "name": "MyField1",
+            "designerId": "28ae531e-c4a4-4d58-8268-503eb85be44b"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "duration"
+            },
+            "name": "MyField2",
+            "designerId": "b74cd225-dbdc-4326-8c2b-77a1bb45b2b9",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "data"
+                        ],
+                        "fn": "calculate",
+                        "implHandler": [
+                            "return (Ext.Date.getElapsed(data.startTime, data.endTime)) / 1000 / 60;"
+                        ]
+                    },
+                    "name": "calculate",
+                    "designerId": "bf060430-a7a0-4f90-b250-05087717105b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": [
+                    "location.name",
+                    ""
+                ],
+                "name": "location"
+            },
+            "name": "MyField4",
+            "designerId": "8cb6d8cc-a629-4d61-bc16-b7a8d4ec5b16"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "startMinutesFromMidnight"
+            },
+            "name": "MyField3",
+            "designerId": "8d8344d6-923a-43c6-b810-39266218feb5",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "data"
+                        ],
+                        "fn": "calculate",
+                        "implHandler": [
+                            "return ((data.startTime.getHours() * 60) + data.startTime.getMinutes());"
+                        ]
+                    },
+                    "name": "calculate",
+                    "designerId": "77996ba4-6749-465e-9dbc-07d3628ffd55"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "resources/data/sessions.json"
+            },
+            "name": "MyAjaxProxy",
+            "designerId": "ba55646d-5cbd-4047-9570-9e7c32b11e33",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "sessions"
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "ab3e46ba-dfd9-491e-88d5-1507eee882be"
+                }
+            ]
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "string"
+                ],
+                "fn": "contains",
+                "implHandler": [
+                    "return\tExt.String.createRegex(string, false, false, true).test(this.data.title) ||",
+                    "        Ext.String.createRegex(string, false, false, true).test(this.data.description);",
+                    ""
+                ]
+            },
+            "name": "contains",
+            "designerId": "92a31d2e-bb52-475b-b527-7c368e451f23"
+        }
+    ]
+}

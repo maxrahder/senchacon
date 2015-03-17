@@ -1,0 +1,56 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Presentation"
+        ],
+        "name": "Test",
+        "views": [
+            "MyViewport",
+            "presentation.PresentationViewPanel",
+            "presentation.View",
+            "presentation.Toolbar"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "name": "launch",
+            "designerId": "667b9b1a-fad9-4280-9e27-15973b55bbc4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "init",
+                "implHandler": [
+                    "Test.stateProvider = Ext.create('Ext.state.LocalStorageProvider');"
+                ]
+            },
+            "name": "init",
+            "designerId": "f1e5a4cd-cc97-41ce-8b8c-07d379d9d155"
+        }
+    ]
+}

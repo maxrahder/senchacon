@@ -1,0 +1,209 @@
+{
+    "type": "Ext.view.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "collapse": null,
+        "designer|userAlias": "presentationview",
+        "designer|userClassName": "presentation.View",
+        "emptyText": "There are no matching presentations.",
+        "focusCls": null,
+        "height": null,
+        "itemCls": null,
+        "itemSelector": null,
+        "scrollable": true,
+        "selectedItemCls": null,
+        "width": null
+    },
+    "name": "MyView",
+    "configAlternates": {
+        "collapse": "boolean",
+        "scrollable": "boolean"
+    },
+    "designerId": "ed110723-d2d3-4dc5-af90-cd4a27a9d715",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "collapse",
+            "type": "string"
+        }
+    ],
+    "viewControllerInstanceId": "45b93e6a-27ed-4175-b981-e8ab0ccd7cf5",
+    "viewModelInstanceId": "60be478e-c954-4820-a11d-0f6849c119fd",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div class=\"presentation collapsed\">",
+                    "    <div class=\"daybar\">",
+                    "        {[this.getPresentationBar(values)]}",
+                    "    </div>",
+                    "    <div class=\"title\">",
+                    "        {[this.getFavoriteIcon(values)]}",
+                    "        {[this.getTrackIcon(values)]}",
+                    "        {title}",
+                    "    </div> ",
+                    "    <div class=\"description\">",
+                    "        <div class=\"timeAndLocation\">{startTime:date('H:i')} to {startTime:date('H:i')}, {location}</div>",
+                    "        {description}",
+                    "        <div class=\"speakers\">",
+                    "            <table><tr>",
+                    "                <tpl for=\"speakers\">",
+                    "                    <td>",
+                    "                        <figure><img src={avatar_url} height=\"80\"/><figcaption>{name}</figcaption</figure>",
+                    "                    </td>",
+                    "                </tpl>",
+                    "            </tr></table>",
+                    "        </div>",
+                    "    </div>",
+                    "",
+                    "</div>"
+                ],
+                "pixelsPerMinute": 1.75,
+                "startOfDayMinutes": null,
+                "trackIconCls": [
+                    "{",
+                    "Design: 'design',",
+                    "Develop: 'develop',",
+                    "Deploy: 'deploy'",
+                    "}"
+                ]
+            },
+            "name": "itemTpl",
+            "configAlternates": {
+                "trackIconCls": "object",
+                "pixelsPerMinute": "number",
+                "startOfDayMinutes": "object"
+            },
+            "designerId": "2f7ac841-14c4-46b4-878c-ea5a24eb32d1",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "trackIconCls",
+                    "type": "string"
+                },
+                {
+                    "group": "(Custom Properties)",
+                    "name": "pixelsPerMinute",
+                    "type": "string"
+                },
+                {
+                    "group": "(Custom Properties)",
+                    "name": "startOfDayMinutes",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "templatefunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "values"
+                        ],
+                        "fn": "getPresentationBar",
+                        "implHandler": [
+                            "var startOfDayMinutesFromMidnight = (8 * 60); // 8:00 times 60 minutes per hour",
+                            "var endOfDayMinutesFromMidnight = (19 * 60); // 19:00 times 60 minutes per hour",
+                            "var durationOfDayMinutes = (endOfDayMinutesFromMidnight - startOfDayMinutesFromMidnight);",
+                            "var startOfLectureMinutes = (values.startMinutesFromMidnight - startOfDayMinutesFromMidnight);",
+                            "",
+                            "var percentagePerMinute = (1 / durationOfDayMinutes * 100);",
+                            "",
+                            "var startPercentage = (startOfLectureMinutes * percentagePerMinute);",
+                            "var durationPercentage = (values.duration * percentagePerMinute);",
+                            "",
+                            "var style = 'left: ' + startPercentage + '%; width: ' + durationPercentage + '%; ';",
+                            "var cls = this.trackIconCls[values.track];",
+                            "",
+                            "var startString = Ext.Date.format(values.startTime, 'H:i');",
+                            "var endString = Ext.Date.format(values.endTime, 'H:i');",
+                            "",
+                            "return '<span class= \"' + cls + '\" style=\"'+style+'\">' + startString + ' - ' + endString + '</span>';"
+                        ]
+                    },
+                    "name": "getPresentationBar",
+                    "designerId": "370012ec-b3e2-42ea-813f-6d6ecf798568"
+                },
+                {
+                    "type": "templatefunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "values"
+                        ],
+                        "fn": "getTrackIcon",
+                        "implHandler": [
+                            "return '<span class=\"trackicon ' + this.trackIconCls[values.track] +'\"></span>';",
+                            ""
+                        ]
+                    },
+                    "name": "getTrackIcon",
+                    "designerId": "9ebad2eb-2959-47fb-bdd6-1b04df091273"
+                },
+                {
+                    "type": "templatefunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "values"
+                        ],
+                        "fn": "getFavoriteIcon",
+                        "implHandler": [
+                            "var cls = (values.favorite?'heartin':'heartout');",
+                            "return '<span class=\"favoriteicon ' + cls +'\"></span>';",
+                            ""
+                        ]
+                    },
+                    "name": "getFavoriteIcon",
+                    "designerId": "5d2e0186-ae7f-40ae-8d3b-2b254bc0521b"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDataviewItemClick",
+                "implHandler": [
+                    "if (Ext.fly(e.target).hasCls('favoriteicon')){",
+                    "    record.set('favorite', !record.data.favorite);",
+                    "} else if (!Ext.fly(e.target).hasCls('description')){",
+                    "    Ext.fly(item).down('div.presentation').toggleCls('collapsed');",
+                    "}",
+                    ""
+                ],
+                "name": "itemclick",
+                "scope": "me"
+            },
+            "name": "onDataviewItemClick",
+            "designerId": "f5bf00fb-ed62-41b3-8c72-e53446da887c"
+        }
+    ]
+}

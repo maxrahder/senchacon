@@ -1,0 +1,77 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defaults": null,
+        "designer|userAlias": "presentationviewpanel",
+        "designer|userClassName": "presentation.PresentationViewPanel",
+        "height": null,
+        "layout": "fit",
+        "padding": 8,
+        "responsiveConfig": null,
+        "scrollable": true,
+        "store": null,
+        "width": null
+    },
+    "configAlternates": {
+        "scrollable": "boolean"
+    },
+    "designerId": "540afd0d-f95f-4759-8112-05ffe05e76f2",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "store",
+            "type": "string"
+        }
+    ],
+    "viewControllerInstanceId": "0444dbea-b74c-476c-8c46-bbf61d7ef5b1",
+    "viewModelInstanceId": "0c7f5590-0cc4-4d38-8e0a-3990195f9447",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "date": null,
+                "dock": "top",
+                "publishes": null,
+                "reference": "filters"
+            },
+            "name": "presentation.toolbar",
+            "configAlternates": {
+                "date": "binding",
+                "dayOfWeek": "binding"
+            },
+            "designerId": "ae6fe1d1-a46a-403f-b175-06933d8757d6",
+            "masterInstanceId": "d0189fd8-8215-4455-9697-200b0cd67c30"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "reference": null,
+                "store": [
+                    "{presentations}"
+                ]
+            },
+            "name": "presentation.view",
+            "configAlternates": {
+                "store": "binding",
+                "scrollable": "boolean"
+            },
+            "designerId": "84248b6d-4a6c-4a2a-a7c8-be2723fdd311",
+            "masterInstanceId": "ed110723-d2d3-4dc5-af90-cd4a27a9d715"
+        }
+    ]
+}

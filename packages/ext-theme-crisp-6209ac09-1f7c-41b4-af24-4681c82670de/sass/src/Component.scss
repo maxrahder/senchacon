@@ -1,0 +1,17 @@
+    div.step.expanded {
+      @include transition-property(opacity, padding);
+      @include transition-duration(1s, 0.3s);
+      height: auto;
+      opacity: 1;
+      overflow: hidden;
+      padding: 0;
+      margin: 0 0 2em 1em;
+    }
+    div.step.collapsed {
+      @include transition-property(opacity, padding);
+      @include transition-duration(1s, 0.3s);
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin: 0 0 0 1em;
+    }
